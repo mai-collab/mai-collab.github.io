@@ -11,14 +11,13 @@ Here is a summary description of the topic. Here is the problem. This is why the
 There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
 
 We did this to solve the problem. We concluded that...
+<img align="right" width="200" height="200" src="/assets/IMG/image.jpeg">
+*Figure 1: Dexter who is a forensic scientist who could use this machine learning project in his work
 
 ## Data
 
 Here is an overview of the dataset, how it was obtained and the preprocessing steps taken, with some plots!
 
-![](assets/IMG/datapenguin.png){: width="500" }
-
-*Figure 1: Here is a caption for my diagram. This one shows a pengiun [1].*
 
 ## Modelling
 
