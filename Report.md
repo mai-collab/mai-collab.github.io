@@ -5,7 +5,7 @@ Using collected chemical composition evidence, the performance of key supervised
 <img src="https://github.com/user-attachments/assets/280d49d1-5c5b-409e-bbb6-b419e3f9592b" width = "500"> 
 
 
-<h6 align="center"> Figure 1: An image of shattered glass that can be collected for analysis
+<h6 align="center"> Figure 1: An image of shattered glass that can be collected for analysis </h6>
 
 ***
 
@@ -19,9 +19,9 @@ A glass type database allows a model to be trained to predict glass types using 
 
 Upon training and testing, the decision tree and random forest classifiers were the best models due to their highest F1-scores of 0.81.  
 <p align="center">
-<img src="https://github.com/user-attachments/assets/d58e9542-e7c4-45d4-adb4-9a521e3c0671" width = "200">
+<img src="https://github.com/user-attachments/assets/d58e9542-e7c4-45d4-adb4-9a521e3c0671" width = "200"> </p>
 
-<h6 align="center"> Figure 2: This is Dexter who is a prominent fictional forensic scientist whose colleagues could use this machine learning project in their work (He is actually a forensic blood spatter analysis, so he wouldn't use this exact project)
+<h6 align="center"> Figure 2: This is Dexter who is a prominent fictional forensic scientist whose colleagues could use this machine learning project in their work (He is actually a forensic blood spatter analysis, so he wouldn't use this exact project) </h6>
 
 ## Data
 A database on the UC Irvine Machine Learning Repository allows for these models to be trained to predict glass types.
@@ -46,12 +46,12 @@ Preprocessing: Remove ID column, replace 1, 2, 3, 5, 6, 7 glass types with 1, 2,
 
 Plots of data:  
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/9424d021-0397-4d75-9f3d-97e338f2a551" width = "300"> <img src= "https://github.com/user-attachments/assets/b58250d9-8447-4ce1-85c0-3d71980d225c" width = "300"> <img src= "https://github.com/user-attachments/assets/03cce8f2-a8a3-4774-9606-29ff029e362a" width = "300"> <img src= "https://github.com/user-attachments/assets/8294d6b9-5c1a-4c49-a913-8e5a42f97410" width = "300"> <img src= "https://github.com/user-attachments/assets/50b83126-067c-4b96-a0b5-662dc0b8ad78" width = "300"> <img src= "https://github.com/user-attachments/assets/c59e411a-d5ac-4990-a7ec-86108ad12f5d" width = "300"> <img src= "https://github.com/user-attachments/assets/5a4b5a62-7916-4b1f-b04b-86f7a2febc0c" width = "300"> <img src= "https://github.com/user-attachments/assets/0d5341e8-c976-4197-9314-d8dce9af3045" width = "300"> <img src= "https://github.com/user-attachments/assets/297b3561-8904-45fb-a59d-ab11df724483" width = "300"> 
+<img src= "https://github.com/user-attachments/assets/9424d021-0397-4d75-9f3d-97e338f2a551" width = "300"> <img src= "https://github.com/user-attachments/assets/b58250d9-8447-4ce1-85c0-3d71980d225c" width = "300"> <img src= "https://github.com/user-attachments/assets/03cce8f2-a8a3-4774-9606-29ff029e362a" width = "300"> <img src= "https://github.com/user-attachments/assets/8294d6b9-5c1a-4c49-a913-8e5a42f97410" width = "300"> <img src= "https://github.com/user-attachments/assets/50b83126-067c-4b96-a0b5-662dc0b8ad78" width = "300"> <img src= "https://github.com/user-attachments/assets/c59e411a-d5ac-4990-a7ec-86108ad12f5d" width = "300"> <img src= "https://github.com/user-attachments/assets/5a4b5a62-7916-4b1f-b04b-86f7a2febc0c" width = "300"> <img src= "https://github.com/user-attachments/assets/0d5341e8-c976-4197-9314-d8dce9af3045" width = "300"> <img src= "https://github.com/user-attachments/assets/297b3561-8904-45fb-a59d-ab11df724483" width = "300"> </p>
 
 <h6 align="center"> Figure 3: Histogram of all 7 features </h6>
 
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/388f085a-348b-4da1-91e8-a47e3429e2fb" width = "500">
+<img src= "https://github.com/user-attachments/assets/388f085a-348b-4da1-91e8-a47e3429e2fb" width = "500"> </p>
 
 <h6 align="center"> Figure 4: Correlation Matrix of dataset </h6>
 
@@ -85,7 +85,7 @@ Support Vector Classifier -- Precision: 0.68, Recall: 0.72, F1-score: 0.69
 K-Nearest Neighbor -- Precision: 0.62, Recall: 0.63, F1-score: 0.59
 
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/284d6997-6c9b-4263-a3d2-10801944d7f2" width = "250"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "250"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "250"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "250"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "250">
+<img src= "https://github.com/user-attachments/assets/284d6997-6c9b-4263-a3d2-10801944d7f2" width = "250"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "250"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "250"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "250"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "250"> </p>
 
 <h6 align="center"> Figure 5: Confusion matrix (CM) for all five models </h6>
 
@@ -103,9 +103,9 @@ Support Vector Classifier -- Precision: 0.39, Recall: 0.30, F1-score: 0.23
 
 K-Nearest Neighbor -- Precision: 0.42, Recall: 0.42, F1-score: 0.40
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/8579a2f6-f75e-4cd6-b098-39f6b5f13146" width = "250"> <img src= "https://github.com/user-attachments/assets/80ca6497-90a7-427b-8e37-25b3697fdae2" width = "250"> <img src= "https://github.com/user-attachments/assets/848dfad7-8893-4a34-a750-51de39bfa488" width = "250"> <img src= "https://github.com/user-attachments/assets/fd1e11e7-3587-4bf5-89b2-1d2fcf0cba09" width = "250"> <img src= "https://github.com/user-attachments/assets/d82a5e0e-d617-4a18-8c3c-bcc6ef02a02f" width = "250">
+<img src= "https://github.com/user-attachments/assets/8579a2f6-f75e-4cd6-b098-39f6b5f13146" width = "250"> <img src= "https://github.com/user-attachments/assets/80ca6497-90a7-427b-8e37-25b3697fdae2" width = "250"> <img src= "https://github.com/user-attachments/assets/848dfad7-8893-4a34-a750-51de39bfa488" width = "250"> <img src= "https://github.com/user-attachments/assets/fd1e11e7-3587-4bf5-89b2-1d2fcf0cba09" width = "250"> <img src= "https://github.com/user-attachments/assets/d82a5e0e-d617-4a18-8c3c-bcc6ef02a02f" width = "250"> </p>
   
-<h6 align="center"> Figure 6: Confusion matrix (CM) for all 5 models trained only with Magnesium (Mg)
+<h6 align="center"> Figure 6: Confusion matrix (CM) for all 5 models trained only with Magnesium (Mg) </h6>
 
 ## Discussion
 The database provided is imbalanced with the lowest class (5) having 9 instances and the highest class (2) having 76 instances. Thus, the predictions by the models are focused on the classes with higher instances in the dataset: classes 1, 2, and 6. In order to minimize the effects of the imbalanced dataset, the weighted average was used in the metric analyses of each model which takes into account the contributions from each class predicted. 
