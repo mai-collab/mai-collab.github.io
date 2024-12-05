@@ -1,15 +1,13 @@
-## Using Chemistry Composition for Glass Classification
+<h1> Using Chemistry Composition for Glass Classification </h1> 
 
 Using collected chemical composition evidence, the performance of key supervised classification models in predicting the right glass types were analyzed.
 <p align="center">
-<img src="https://github.com/user-attachments/assets/280d49d1-5c5b-409e-bbb6-b419e3f9592b" width = "500"> 
+<img src="https://github.com/user-attachments/assets/280d49d1-5c5b-409e-bbb6-b419e3f9592b" width = "500"> </p>
 
 
-<h6 align="center"> Figure 1: An image of shattered glass that can be collected for analysis </h6>
+<h4 align="center"> Figure 1: An image of shattered glass that can be collected for analysis </h4>
 
-***
-
-## Introduction 
+<h2> Introduction </h2>
 
 Forensic science is an interdisciplinary field that is essential to deciphering the who, what, where, when, and why of a crime committed. In order to do so, crime scene investigators collect and analyze the remaining evidence of a crime scene in hopes of creating a visual of what happened at the scene. Glass is a commonly left over piece of evidence as a result of breaking in, collateral damage of a physical altercation, etc. The type of glass is helpful in reconstructing what exactly happened, as glass types have unique fracturing patterns, and, eventually, linking suspects to scenes. 
 
@@ -21,9 +19,9 @@ Upon training and testing, the decision tree and random forest classifiers were 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/d58e9542-e7c4-45d4-adb4-9a521e3c0671" width = "200"> </p>
 
-<h6 align="center"> Figure 2: This is Dexter who is a prominent fictional forensic scientist whose colleagues could use this machine learning project in their work (He is actually a forensic blood spatter analysis, so he wouldn't use this exact project) </h6>
+<h4 align="center"> Figure 2: This is Dexter who is a prominent fictional forensic scientist whose colleagues could use this machine learning project in their work (He is actually a forensic blood spatter analysis, so he wouldn't use this exact project) </h4>
 
-## Data
+<h2> Data </h2>
 A database on the UC Irvine Machine Learning Repository allows for these models to be trained to predict glass types.
 
 Data: 
@@ -48,14 +46,14 @@ Plots of data:
 <p align="center">
 <img src= "https://github.com/user-attachments/assets/9424d021-0397-4d75-9f3d-97e338f2a551" width = "300"> <img src= "https://github.com/user-attachments/assets/b58250d9-8447-4ce1-85c0-3d71980d225c" width = "300"> <img src= "https://github.com/user-attachments/assets/03cce8f2-a8a3-4774-9606-29ff029e362a" width = "300"> <img src= "https://github.com/user-attachments/assets/8294d6b9-5c1a-4c49-a913-8e5a42f97410" width = "300"> <img src= "https://github.com/user-attachments/assets/50b83126-067c-4b96-a0b5-662dc0b8ad78" width = "300"> <img src= "https://github.com/user-attachments/assets/c59e411a-d5ac-4990-a7ec-86108ad12f5d" width = "300"> <img src= "https://github.com/user-attachments/assets/5a4b5a62-7916-4b1f-b04b-86f7a2febc0c" width = "300"> <img src= "https://github.com/user-attachments/assets/0d5341e8-c976-4197-9314-d8dce9af3045" width = "300"> <img src= "https://github.com/user-attachments/assets/297b3561-8904-45fb-a59d-ab11df724483" width = "300"> </p>
 
-<h6 align="center"> Figure 3: Histogram of all 7 features </h6>
+<h4 align="center"> Figure 3: Histogram of all 7 features </h4>
 
 <p align="center">
 <img src= "https://github.com/user-attachments/assets/388f085a-348b-4da1-91e8-a47e3429e2fb" width = "500"> </p>
 
-<h6 align="center"> Figure 4: Correlation Matrix of dataset </h6>
+<h4 align="center"> Figure 4: Correlation Matrix of dataset </h4>
 
-## Modelling
+<h2> Modelling </h2>
 Classification Models tried:
 All are supervised as the dataset includes data for both input and corresponding outputs. Thus, supervised models can maximize data usage. 
 
@@ -73,7 +71,7 @@ Goal: Find the best model that can predict glass types based on chemical composi
 
 Secondary goal: Can the features be minimized to just RI to allow for wider application of the dataset?
 
-## Results
+<h1> Modelling </h1>
 Decision Tree Classifier -- Precision: 0.84, Recall: 0.81, F1-score: 0.81
 
 Random Forest Classifier -- Precision: 0.84, Recall: 0.81, F1-score: 0.81
@@ -85,9 +83,9 @@ Support Vector Classifier -- Precision: 0.68, Recall: 0.72, F1-score: 0.69
 K-Nearest Neighbor -- Precision: 0.62, Recall: 0.63, F1-score: 0.59
 
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/284d6997-6c9b-4263-a3d2-10801944d7f2" width = "250"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "250"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "250"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "250"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "250"> </p>
+<img src= "https://github.com/user-attachments/assets/284d6997-6c9b-4263-a3d2-10801944d7f2" width = "450"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "450"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "450"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "450"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "450"> </p>
 
-<h6 align="center"> Figure 5: Confusion matrix (CM) for all five models </h6>
+<h4 align="center"> Figure 5: Confusion matrix (CM) for all five models </h4>
 
 Training models with only Mg as the feature
 
@@ -103,11 +101,11 @@ Support Vector Classifier -- Precision: 0.39, Recall: 0.30, F1-score: 0.23
 
 K-Nearest Neighbor -- Precision: 0.42, Recall: 0.42, F1-score: 0.40
 <p align="center">
-<img src= "https://github.com/user-attachments/assets/8579a2f6-f75e-4cd6-b098-39f6b5f13146" width = "250"> <img src= "https://github.com/user-attachments/assets/80ca6497-90a7-427b-8e37-25b3697fdae2" width = "250"> <img src= "https://github.com/user-attachments/assets/848dfad7-8893-4a34-a750-51de39bfa488" width = "250"> <img src= "https://github.com/user-attachments/assets/fd1e11e7-3587-4bf5-89b2-1d2fcf0cba09" width = "250"> <img src= "https://github.com/user-attachments/assets/d82a5e0e-d617-4a18-8c3c-bcc6ef02a02f" width = "250"> </p>
+<img src= "https://github.com/user-attachments/assets/8579a2f6-f75e-4cd6-b098-39f6b5f13146" width = "450"> <img src= "https://github.com/user-attachments/assets/80ca6497-90a7-427b-8e37-25b3697fdae2" width = "450"> <img src= "https://github.com/user-attachments/assets/848dfad7-8893-4a34-a750-51de39bfa488" width = "450"> <img src= "https://github.com/user-attachments/assets/fd1e11e7-3587-4bf5-89b2-1d2fcf0cba09" width = "450"> <img src= "https://github.com/user-attachments/assets/d82a5e0e-d617-4a18-8c3c-bcc6ef02a02f" width = "450"> </p>
   
-<h6 align="center"> Figure 6: Confusion matrix (CM) for all 5 models trained only with Magnesium (Mg) </h6>
+<h4 align="center"> Figure 6: Confusion matrix (CM) for all 5 models trained only with Magnesium (Mg) </h4>
 
-## Discussion
+<h2> Discussion </h2>
 The database provided is imbalanced with the lowest class (5) having 9 instances and the highest class (2) having 76 instances. Thus, the predictions by the models are focused on the classes with higher instances in the dataset: classes 1, 2, and 6. In order to minimize the effects of the imbalanced dataset, the weighted average was used in the metric analyses of each model which takes into account the contributions from each class predicted. 
 
 Precision measures the amount of true positives out of all predicted positives by the model, and a high value indicates success at avoiding false positives. Recall measures the true positives out of all actual positives, and a high value indicates success at avoiding false negatives. F1-score combines both precision and recall into one metric. For this glass classification goal, both precision and recall is important as false positives can misidentify a suspect while a false negative will overlook potentially critical evidence. Thus, the F1-score will be prioritized in analysis. 
@@ -120,7 +118,7 @@ K-NN was the worst at prediction, with an f1-score of 0.59, likely due to its se
 
 In addition, the effects of lowering the number of features to one was considered in order to train faster, more efficient, and easier to interpret models. The correlation matrix in figure 4 shows that Mg has the highest correlation with the glass column, -0.71. The data was preprocessed to only include Mg as the input and each model was retrained. Unfortunately, the highest F1-score produced was 0.40 by the K-nearest neighbor model. The K-NN model thrives with less features as it finds the nearest input data point to make a majority prediction. This performance is expected as the decision boundary is significantly simpler and linear with only 1 feature. Also, the data points are likely closer together with just 1 feature, so the model can better find neighbors that correctly predict. Nonetheless, the model was not great at predicting the glass types. As evidenced by figure 6, all 5 models failed to produce CMs that were comparable to the models trained on the entire dataset, let alone produce a diagonal line. It is discouraged to utilize a single feature in predicting glass types, though its wide application could have been useful. 
 
-## Conclusion
+<h2> Conclusion</h2>
 
 Testing 5 supervised learning, classification models on a glass classification task with 9 features showed that tree based algorithms continue to outperform the logistic regression, support vector classifier, and K-nearest neighbors. Many aspects of crime scene investigation incorporate the classification of an unknown object, thus decision trees can be trained using chemical composition to automate some aspects of classifying unknowns in the crime scene. This can help reconstruct what happened during the crime and aid in linking suspects. Then, time can be dedicated to evidence analyses that require manual attention. 
 
@@ -128,7 +126,7 @@ In addition, it was found that glass classification is not feasible with just ma
 
 With the information on decision tree algorithms, other evidence classification tasks can be automated, such as blood spatter analysis, for Dexter in figure 2. Essentialy, any task involving chemical composition to classify the unknown can benefit from a tree based machine learning approach. 
 
-## References
+<h2> References </h2>
 
 [^1]: Uddin, S., & Lu, H. (2024). Confirming the statistically significant superiority of tree-based machine learning algorithms over their counterparts for tabular data. PloS one, 19(4), e0301541. https://doi.org/10.1371/journal.pone.0301541
 
