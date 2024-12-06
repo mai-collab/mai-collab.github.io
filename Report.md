@@ -113,7 +113,7 @@ Support Vector Classifier -- Precision: 0.68, Recall: 0.72, F1-score: 0.69
 K-Nearest Neighbor -- Precision: 0.62, Recall: 0.63, F1-score: 0.59
 
 <p align="center">
-<img src= https://github.com/user-attachments/assets/0939a795-888a-4e62-8d5d-1f5726856594" width = "450"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "450"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "450"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "450"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "450"> </p>
+<img src= "https://github.com/user-attachments/assets/4c732129-682e-4a9e-a8eb-7049b482d1c5" width = "450"> <img src= "https://github.com/user-attachments/assets/a0ec93a3-ddea-4bed-83a2-487596f8e8bc" width = "450"> <img src= "https://github.com/user-attachments/assets/37c4b8ac-059a-4e9e-8497-814b88725c5a" width = "450"> <img src= "https://github.com/user-attachments/assets/53bcbc92-3925-4176-83c4-2835b355207e" width = "450"> <img src= "https://github.com/user-attachments/assets/042e07d7-4711-46b7-ade1-eaf6dc81485c" width = "450"> </p>
 
 <h6 align="center"> Figure 5: Confusion matrix (CM) for all five models </h6>
 
