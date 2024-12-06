@@ -11,11 +11,11 @@ Using collected chemical composition evidence, the performance of key supervised
 
 <h2> Introduction </h2>
 
-Forensic science is an interdisciplinary field that is essential to deciphering the who, what, where, when, and why of a crime committed. In order to do so, crime scene investigators collect and analyze the remaining evidence of a crime scene in hopes of creating a visual of what happened at the scene. Glass is a commonly left over piece of evidence as a result of breaking in, collateral damage of a physical altercation, etc. The type of glass is helpful in reconstructing what exactly happened, as glass types have unique fracturing patterns, and, eventually, linking suspects to scenes.
+Forensic science is an interdisciplinary field that is essential to deciphering the who, what, where, when, and why of a crime committed. In order to do so, crime scene investigators collect and analyze the remaining evidence of a crime scene in hopes of creating a visual of what happened at the scene. Glass is a commonly left over piece of evidence as a result of breaking in, collateral damage of a physical altercation, etc. The type of glass is helpful in reconstructing what exactly happened since glass types have unique fracturing patterns. Eventually, the glass classification can potentially link a suspect to a crime scene, but caution must be taken to avoid misidentifying suspects.
 
 Manual analysis of glass types can be time consuming, subject to human error, and knowledge intensive. Glass classification can utilize machine learning models to speed up the process, standardize analysis, learn from itself, and update itself according to new glass types (if manufactured) -- all with minimal effort from investigators. Crime scene investigators have multitudes of evidence to process, thus training models with glass classification can aid in lessening the workload and allowing them to focus their efforts on components that require manual analysis. 
 
-A glass type database allows a model to be trained to predict glass types using their oxide content. I will train key machine learning models: decision tree classification, random forest classification, support vector classification (SVC), K-nearest neighbor (K-NN), and logistic regression (LR), to assess the best model to implement in glass prediction. 
+A glass type database allows a supervised model to be trained to predict glass types using their oxide content. I will train key machine learning models: decision tree classification, random forest classification, support vector classification (SVC), K-nearest neighbor (K-NN), and logistic regression (LR), to assess the best model to implement in glass prediction. 
 
 Upon training and testing, the decision tree and random forest classifiers were the best models due to their highest F1-scores of 0.81.
 
@@ -45,7 +45,7 @@ Glass types:
 
 6: Headlamps (29 instances)
 
-Preprocessing: Remove ID column, replace 1, 2, 3, 5, 6, 7 glass types with 1, 2, 3, 4, 5, 6 (replace 4) because there is no data for glass type 4. 
+Preprocessing: Remove ID column and replace 1, 2, 3, 5, 6, 7 glass types with 1, 2, 3, 4, 5, 6 (replace 4) because there is no data for glass type 4. 
 
 Decision Tree Classifier Parameters: Setting a maximum depth will prevent the tree from becoming too deep, which leads to overfitting. It was experimentally found at 10 to be the best balance between overfitting and underfitting the training data.
 
@@ -70,7 +70,7 @@ Plots of data:
 <p align="center">
 <img src= "https://github.com/user-attachments/assets/9424d021-0397-4d75-9f3d-97e338f2a551" width = "300"> <img src= "https://github.com/user-attachments/assets/b58250d9-8447-4ce1-85c0-3d71980d225c" width = "300"> <img src= "https://github.com/user-attachments/assets/03cce8f2-a8a3-4774-9606-29ff029e362a" width = "300"> <img src= "https://github.com/user-attachments/assets/8294d6b9-5c1a-4c49-a913-8e5a42f97410" width = "300"> <img src= "https://github.com/user-attachments/assets/50b83126-067c-4b96-a0b5-662dc0b8ad78" width = "300"> <img src= "https://github.com/user-attachments/assets/c59e411a-d5ac-4990-a7ec-86108ad12f5d" width = "300"> <img src= "https://github.com/user-attachments/assets/5a4b5a62-7916-4b1f-b04b-86f7a2febc0c" width = "300"> <img src= "https://github.com/user-attachments/assets/0d5341e8-c976-4197-9314-d8dce9af3045" width = "300"> <img src= "https://github.com/user-attachments/assets/297b3561-8904-45fb-a59d-ab11df724483" width = "300"> </p>
 
-<h6 align="center"> Figure 3: Histogram of all 7 features </h6>
+<h6 align="center"> Figure 3: Histogram of all nine features </h6>
 
 <p align="center">
 <img src= "https://github.com/user-attachments/assets/388f085a-348b-4da1-91e8-a47e3429e2fb" width = "500"> </p>
@@ -83,21 +83,19 @@ Plots of data:
 Classification Models tried:
 All are supervised as the dataset includes data for both input and corresponding outputs. Thus, supervised models can maximize data usage. 
 
-Decision Tree Classifier -- Splits data based on feature values to arrive at a class 
-prediction.
+Decision Tree Classifier -- Splits data continuously based on feature values to arrive at a class prediction.
 
-Random Forest Classifier -- Multiple decision trees trained using bootstrapped dat 
-which are then averaged to make a prediction.
+Random Forest Classifier -- Multiple decision trees trained using bootstrapped data which are then averaged to make a prediction.
 
-Logistic Regression -- Mainly used for binary outputs because it predicts how likely an input points to one of two outputs, rather than predicting the class itself (incorporated this out of curiosity though it does not obviously apply to this dataset of multiple classes).
+Logistic Regression (LR) -- Mainly used for binary outputs because it predicts how likely an input points to one of two outputs, rather than predicting the class itself (incorporated this out of curiosity though it does not obviously apply to this dataset of multiple classes).
 
-Support Vector Classifier -- Finds the decision boundary that best separates classes by maximizing the margin between the support vectors of each class, then determines which side of the boundary it falls on.
+Support Vector Classifier (SVC) -- Finds the decision boundary that best separates classes by maximizing the margin between the support vectors of each class, then determines which side of the boundary it falls on.
 
-K-Nearest Neighbor -- Classifies using the majority class of the nearest neighbor in the feature space.
+K-Nearest Neighbor (K-NN) -- Classifies using the majority class of the nearest neighbor in the feature space.
 
-**Goal**: Find the best model that can predict glass types based on chemical composition
+**Goal**: Find the best model that can predict glass types based on chemical composition.
 
-**Secondary goal**: Can the features be minimized to just RI to allow for wider application of the dataset?
+**Secondary goal**: Can the features be minimized to just Mg to allow for wider application of the dataset?
 
 * * *
 
@@ -142,24 +140,24 @@ The database provided is imbalanced with the lowest class (5) having 9 instances
 
 Precision measures the amount of true positives out of all predicted positives by the model, and a high value indicates success at avoiding false positives. Recall measures the true positives out of all actual positives, and a high value indicates success at avoiding false negatives. F1-score combines both precision and recall into one metric. For this glass classification goal, both precision and recall is important as false positives can misidentify a suspect while a false negative will overlook potentially critical evidence. Thus, the F1-score will be prioritized in analysis. 
 
-The best models at predicting glass types were the decision tree and random forest classifiers, which both had F1-scores of 0.81.  The matching predictions are not uncommon as the latter is simply made of multiple decision trees. As shown in the CMs in figure 5, the decision tree and random forest classifiers produced the relatively clearest diagonal line indicating a higher concentration of correct predictions as opposed to the remaining models which failed to produce a clear diagonal. Decision trees can evaluate the importance of different features in predicting the glass type and can run multi-class classifications which can support its ability to best predict glass types. In addition, it is widely accepted that tree based machine learning algorithms are statistically superior in predicting output values in comparison to support vector machine, logistic regression, and K-NN models (Uddin and Lu, 2024 [^1]). 
+The best models at predicting glass types were the decision tree and random forest classifiers, which both had F1-scores of 0.81.  The matching predictions are not uncommon as the latter is simply made of multiple decision trees. As shown in the CMs in figure 5, the decision tree and random forest classifiers produced the relatively clearest diagonal line indicating a higher concentration of correct predictions as opposed to the remaining models which failed to produce a clear diagonal. Decision trees can evaluate the importance of different features in predicting the glass type and can run multi-class classifications which can support its ability to best predict glass types. In addition, it is widely accepted that tree based machine learning algorithms are statistically superior in predicting output values in comparison to SVC, LR, and K-NN models (Uddin and Lu, 2024 [^1]). 
 
-Though tree based algorithms can prioritize feature importance and predict classes successfully, they have their limitations when it comes to overfitting, large computational cost, and bias to imbalanced data. The trees aim to split at and classify every datapoint in the training phase, which can grow the tree excessively and lead to overfitting the data. In addition, the trees can begin to ignore minority instance classes when making tree splits as there is not enough data in those classes. Also, a high computational cost can slow the training time and increase hardware costs. A random forest mitigates some of these issues to an extent by averaging out the results from multiple decision trees, however the limitations should be noted if applying this model to other evidence classification tasks. 
+Though tree based algorithms can prioritize feature importance and predict classes successfully, they have their limitations when it comes to overfitting, large computational cost, and bias to imbalanced data. The trees aim to split at and classify every datapoint in the training phase, which can grow the tree excessively and lead to overfitting the data. Setting a maximum depth and n_estimators value can help to alleviate this issue. In addition, the trees can begin to ignore minority instance classes when making tree splits as there is not enough data in those classes. Also, a high computational cost can slow the training time and increase hardware costs. A random forest mitigates some of these issues to an extent by averaging out the results from multiple decision trees, however the limitations should be noted if applying this model to other evidence classification tasks. 
 
-K-NN was the worst at prediction, with an f1-score of 0.59, likely due to its sensitivity to high-dimensional datasets and inability to learn complex decision boundaries. Since K-NN works by essentially finding the nearest data point to a given input, its failure to predict this multi-feature problem is expected. It can be difficult and complex to plot multiple features in order to find the nearest cluster. The simplicity of this model limits its ability to take into account all 9 features in making a prediction. 
+K-NN was the worst at prediction, with an f1-score of 0.59, likely due to its sensitivity to high-dimensional datasets and inability to learn complex decision boundaries. Since K-NN works by essentially finding the nearest data point to a given input, its failure to predict this multi-feature problem is expected. It can be difficult and complex to plot multiple features in order to find the nearest cluster. The simplicity of this model limits its ability to take into account all nine features in making a prediction. 
 
-In addition, the effects of lowering the number of features to one was considered in order to train faster, more efficient, and easier to interpret models. The correlation matrix in figure 4 shows that Mg has the highest correlation with the glass column, -0.73. The data was preprocessed to only include Mg as the input and each model was retrained. Unfortunately, the highest F1-score produced was 0.40 by the K-nearest neighbor model. The K-NN model thrives with less features as it finds the nearest input data point to make a majority prediction. This performance is expected as the decision boundary is significantly simpler and linear with only 1 feature. Also, the data points are likely closer together with just 1 feature, so the model can better find neighbors that correctly predict. Nonetheless, the model was not great at predicting the glass types. As evidenced by figure 6, all 5 models failed to produce CMs that were comparable to the models trained on the entire dataset, let alone produce a diagonal line. It is discouraged to utilize a single feature in predicting glass types, though its wide application could have been useful.
+In addition, the effects of lowering the number of features to one was considered in order to train faster, more efficient, and easier to interpret models. The correlation matrix in figure 4 shows that Mg has the highest correlation with the glass column, -0.73. The data was preprocessed to only include Mg as the input and each model was retrained. Unfortunately, the highest F1-score produced was 0.40 by the K-NN model. The K-NN model thrives with less features as it finds the nearest input data point to make a majority prediction. This performance is expected as the decision boundary is significantly simpler and linear with only one feature. Also, the data points are likely closer together with just one feature, so the model can better find neighbors that correctly predict the class. Nonetheless, the model was not great at predicting the glass types. As evidenced by figure 6, all 5 models failed to produce CMs that were comparable to the models trained on the entire dataset, let alone produce a diagonal line. It is discouraged to utilize a single feature in predicting glass types, though its wide application could have been useful.
 
 * * *
 
 <h2> Conclusion</h2>
 
-Testing five supervised learning, classification models on a glass classification task with 9 features showed that tree based algorithms continue to outperform the logistic regression, support vector classifier, and K-nearest neighbors. Many aspects of crime scene investigation incorporate the classification of an unknown object, 
+Testing five supervised learning, classification models on a glass classification task with nine features showed that tree based algorithms continue to outperform the logistic regression, support vector classifier, and K-nearest neighbors. Many aspects of crime scene investigation incorporate the classification of an unknown object, 
 thus decision trees can be trained using chemical composition to automate some aspects of classifying unknowns in the crime scene. This can help reconstruct what 
 happened during the crime and aid in linking suspects. Then, time can be dedicated to evidence analyses that require manual attention. 
 
 In addition, it was found that glass classification is not feasible with just magnesium as the feature. Though it would make model interpretation simpler, reduce 
-computational cost, and allow for quicker evidence collection, the best model, K-NN, performed worse than the worst model that was trained on the entire dataset. 
+computational cost, and allow for quicker evidence collection, the best model, K-NN, performed worse than the worst model, also K-NN, that was trained on the entire dataset.
 
 With the information on decision tree algorithms, other evidence classification tasks can be automated, such as blood spatter analysis, for Dexter in figure 2. 
 Essentialy, any task involving chemical composition to classify the unknown can benefit from a tree based machine learning approach.
